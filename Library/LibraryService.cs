@@ -115,8 +115,28 @@ namespace Library
 
         }
 
+        public void SearchBook(string word)
+        {
+            List<Book> searchResult = _books.Where(b => b.Title.Contains(word, StringComparison.OrdinalIgnoreCase)).ToList();
+            if (searchResult.Count > 0)
+            {
+                foreach (var book in searchResult)
+                {
+                    Console.WriteLine($"Title of the Book: {book.Title}");
+                    Console.WriteLine($"Title of the Book: {book.Author}");
+                    Console.WriteLine($"Book Id: {book.BookId}");
+                    Console.WriteLine($"Number of Copies: {book.Copies}");
+                    Console.WriteLine("==========================\n\n");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No books found with the given keyword.");
+            }
 
 
+
+        }
     }
 
 }

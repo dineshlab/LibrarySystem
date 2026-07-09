@@ -53,7 +53,9 @@ while (loop)
             break;
 
         case "5":
-            Console.WriteLine("This feature is not implemented");
+            Console.WriteLine("Enter the name of the book or the keyword");
+            string? word = Console.ReadLine();
+            libraryService.SearchBook(word);
             break;
 
         case "6":
