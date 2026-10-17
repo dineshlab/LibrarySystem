@@ -8,19 +8,19 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repo
-        uses: actions/Checkout@7.0.1
+          uses: actions/Checkout@7.0.1
 
         - name: Install Cowsay Program
-        run: sudo apt-get install cowsay -y
+          run: sudo apt-get install cowsay -y
 
         - name: Execute Cowsay CMD
-        run: cowsay -f dragon "Run for cover, I am a DRAGON...RAWR" >> dragon.txt
+          run: cowsay -f dragon "Run for cover, I am a DRAGON...RAWR" >> dragon.txt
 
         - name: Test File Exists
-        run: grep -i "dragon" dragon.txt
+          run: grep -i "dragon" dragon.txt
 
         - name: Read File
-        run: cat dragon.txt
+          run: cat dragon.txt
 
         - name: List Repo Files
-        run: ls -ltra
+          run: ls -ltra
