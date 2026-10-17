@@ -1,13 +1,13 @@
 name: My GA workflow
 
-on: push
+# on: push
 
 jobs:
     first_job:
         runs-on:
         steps:
         - name: Checkout Repo
-          users: actions/checkout@v7.0.1
+          uses: actions/checkout@v7.0.1
 
         - name: List and Read file
           run: |
