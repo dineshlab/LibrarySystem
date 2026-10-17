@@ -1,0 +1,19 @@
+name: My GA workflow
+
+on: push
+
+jobs:
+    first_job:
+        runs-on:
+        steps:
+        - name: Checkout Repo
+          users: actions/checkout@v7.0.1
+
+        - name: List and Read file
+          run: |
+            echo "My Github Actions Job"
+            ls -ltra
+
+        - name: Generate ASCII Artwork
+          run: cowsay -f dragon "Run for cover, I am a DRAGON ...RAWR" >> dragon.txt
+            
